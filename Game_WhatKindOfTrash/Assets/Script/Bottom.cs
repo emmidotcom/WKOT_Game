@@ -7,15 +7,18 @@ public class Bottom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Trash1"))
+        if (other.gameObject.CompareTag("OrganicWaste"))
         {
             Destroy(other.gameObject);                          // wenn Tag richtig destroy OBJ
             ScoreManager.instance.AddTakePoint();               // Zugriff auf ScoreManager Script -> erhöhe Score um -10
+            BottomPoints.instance.TakeBadPoint();
+            
         }
-        if (other.gameObject.CompareTag("Trash2"))
+        if (other.gameObject.CompareTag("PlasticWaste"))
         {
-            Destroy(other.gameObject);                          // wenn Tag richtig destroy OBJ
+            Destroy(other.gameObject);                     // wenn Tag richtig destroy OBJ
             ScoreManager.instance.AddTakePoint();               // Zugriff auf ScoreManager Script -> erhöhe Score um -10
+            BottomPoints.instance.TakeBadPoint();
         }
 
     }
