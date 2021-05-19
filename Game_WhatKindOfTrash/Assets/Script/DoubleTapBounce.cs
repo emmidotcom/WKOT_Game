@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoubleTapBounce : MonoBehaviour
 {
+
     public float tapForce = 10;                             //Stärke des Bounce -> in Unity selbst variierbar
     public float tiltSmooth = 2;                            //Smoothnes des Bounce -> in Unity selbst variierbar
     public Vector3 startPos;
@@ -20,15 +21,14 @@ public class DoubleTapBounce : MonoBehaviour
 
 
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))                    //Wenn Maus Gedrückt dann:
-        {
-            transform.rotation = forwardRotation;           //Jump-Rotation tritt ein
-            rigidbody.velocity = Vector3.zero;
-            rigidbody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);       //OBJ jumped/bounced mit TapForce (Stärke des Bounce)
-        }
 
+    // Update is called once per frame
+    void OnMouseDown()
+    {
+
+        transform.rotation = forwardRotation;           //Jump-Rotation tritt ein
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);       //OBJ jumped/bounced mit TapForce (Stärke des Bounce)
         transform.rotation = Quaternion.Lerp(transform.rotation, downRotation, tiltSmooth * Time.deltaTime);        //Fall-Rotation nur während OBJ angeklickt wird
     }
 }
