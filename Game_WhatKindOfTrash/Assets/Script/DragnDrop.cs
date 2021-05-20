@@ -9,6 +9,7 @@ public class DragnDrop : MonoBehaviour
     void OnMouseDown()                                          //Wenn Maus gedrückt OBJ wird Kinematic (Starr) und kann bewegt werden
     {
         Pressed = true;
+        GetComponent<Rigidbody2D>().velocity=Vector2.zero;  //dann fällts einfach runter
         GetComponent<Rigidbody2D>().isKinematic = true;
     }
     void OnMouseUp()                                            //Wenn Maus losgelassen OBJ wird Dynamik und bewegt sich wie zuvor weiter
