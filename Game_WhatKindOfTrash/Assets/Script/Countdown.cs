@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 20f; //hier Zeit die wir wollen
+    float startingTime = 30f; //hier Zeit die wir wollen
 
     [SerializeField] Text countdownText;
 
