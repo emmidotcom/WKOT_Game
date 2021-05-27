@@ -8,25 +8,40 @@ public class DragnDrop : MonoBehaviour
 
     void OnMouseDown()                                          //Wenn Maus gedrückt OBJ wird Kinematic (Starr) und kann bewegt werden
     {
-        Pressed = true;
-        GetComponent<Rigidbody2D>().velocity=Vector2.zero;  //dann fällts einfach runter
-        GetComponent<Rigidbody2D>().isKinematic = true;
+        if (!IngameMenu.Instance.isPaused)                        //ausführen falls nicht pausiert -> damit man sachen im pause ned bewegen kann
+        {
+            Pressed = true;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;  //dann fällts einfach runter
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
     }
     void OnMouseUp()                                            //Wenn Maus losgelassen OBJ wird Dynamik und bewegt sich wie zuvor weiter
     {
-        Pressed = false;
-        GetComponent<Rigidbody2D>().isKinematic = false;
+        if (!IngameMenu.Instance.isPaused)                       //ausführen falls nicht pausiert -> damit man sachen im pause ned bewegen kann
+        {
+            Pressed = false;
+            GetComponent<Rigidbody2D>().isKinematic = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Pressed)                                             //Maus Gedrückt halten -> OBJ folgt Mausposition
+        if (Pressed)                                             //Maus Gedrückt halten -> OBJ folgt Mausposition
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = mousePos;
+            if (IngameMenu.Instance.isPaused)                  //wenn man Objekt in Hand hat und dann escape drückt konnte man schummeln 
+            {
+                Pressed = false;
+                GetComponent<Rigidbody2D>().isKinematic = false;
+            }
+            else
+            {
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                transform.position = mousePos;
+            }
         }
 
     }
 
 }
+

@@ -25,11 +25,14 @@ public class DoubleTapBounce : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-
-        transform.rotation = forwardRotation;           //Jump-Rotation tritt ein
-        rigidbody.velocity = Vector3.zero;
-        rigidbody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);       //OBJ jumped/bounced mit TapForce (Stärke des Bounce)
-        transform.rotation = Quaternion.Lerp(transform.rotation, downRotation, tiltSmooth * Time.deltaTime);        //Fall-Rotation nur während OBJ angeklickt wird
+        if (!IngameMenu.Instance.isPaused)
+        {
+            transform.rotation = forwardRotation;           //Jump-Rotation tritt ein
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);       //OBJ jumped/bounced mit TapForce (Stärke des Bounce)
+            transform.rotation = Quaternion.Lerp(transform.rotation, downRotation, tiltSmooth * Time.deltaTime);        //Fall-Rotation nur während OBJ angeklickt wird
+        }
+        
     }
 }
 
