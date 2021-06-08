@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class OrganicWasteCan : MonoBehaviour
 {
+    public Transform PointSpawnPosition; //position wo text spawnt
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -14,12 +15,15 @@ public class OrganicWasteCan : MonoBehaviour
             Destroy(other.gameObject);                      // wenn Tag richtig destroy OBJ 
             ScoreManager.instance.AddPoint();               // Zugriff auf ScoreManager Script -> erhöhe Score um +15
             GoodPoints.instance.AddGoodPoint();
+            VisualFeedbackSpawner.Instance.SpawnPointsGood(PointSpawnPosition.position, "+15"); //+15 neben mülltonne
         }
         if (other.gameObject.CompareTag("PlasticWaste"))
         {
             Destroy(other.gameObject);                      // wenn Tag richtig destroy OBJ 
             ScoreManager.instance.TakePoint();              // Zugriff auf ScoreManager Script -> erhöhe Score um -5
             BadPoints.instance.TakeBadPoint();
+            VisualFeedbackSpawner.Instance.SpawnPointsBad(PointSpawnPosition.position, "-10"); //-10 neben mülltonne
+
         }
     }
 }

@@ -13,6 +13,9 @@ public class DragnDrop : MonoBehaviour
             Pressed = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;  //dann fällts einfach runter
             GetComponent<Rigidbody2D>().isKinematic = true;
+
+            GetComponent<Rigidbody2D>().angularVelocity = 0;  //damit Müll sich nicht weiter rotiert
+
         }
     }
     void OnMouseUp()                                            //Wenn Maus losgelassen OBJ wird Dynamik und bewegt sich wie zuvor weiter

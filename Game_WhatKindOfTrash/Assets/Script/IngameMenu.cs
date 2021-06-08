@@ -23,7 +23,7 @@ public class IngameMenu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");    //dann läds main menü szene
-
+        Time.timeScale = 1f;
     }
 
     public void Resume()
