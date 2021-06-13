@@ -10,8 +10,7 @@ public class Countdown : MonoBehaviour
 
     [SerializeField] Text countdownText;
 
-    [SerializeField] Text GameOver;
-
+    [SerializeField] Image GameOver;
     // Start is called before the first frame update
     void Start()
     {
