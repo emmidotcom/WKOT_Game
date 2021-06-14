@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -1220679823606268724}
   - component: {fileID: 7425581661111465685}
   - component: {fileID: -5102940193291079009}
+  - component: {fileID: 979772996966228085}
   m_Layer: 0
   m_Name: EatenApple
   m_TagString: OrganicWaste
@@ -135,6 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startForce: 14
+  minRotation: 60
+  maxRotation: 150
 --- !u!114 &-5102940193291079009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +150,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199e9097bfb648641b6802a95782e8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &979772996966228085
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4176004387500061375}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46059516, y: 0.6539705}
+  m_EdgeRadius: 0

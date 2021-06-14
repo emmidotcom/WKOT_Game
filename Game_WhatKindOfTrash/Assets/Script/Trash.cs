@@ -6,7 +6,7 @@ public class Trash : MonoBehaviour
 {
 
     Rigidbody2D rb; //wir erstellen einen Rigidbody2d und nennen ihn rb
-    public float startForce = 15f; //wir legen eine Zahl fest, um eine startForce generieren
+    public float startForce = 10f; //wir legen eine Zahl fest, um eine startForce generieren
 
     //Rotation Force
     public float minRotation = 60;

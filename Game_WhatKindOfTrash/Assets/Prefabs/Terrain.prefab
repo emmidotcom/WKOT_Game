@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4371678156662095638}
   - component: {fileID: 4371678156662095637}
-  - component: {fileID: 4371678156662095636}
+  - component: {fileID: 6473414787803798915}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
---- !u!154 &4371678156662095636
+--- !u!154 &6473414787803798915
 TerrainCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
