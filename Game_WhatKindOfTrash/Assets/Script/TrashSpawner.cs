@@ -12,12 +12,6 @@ public class TrashSpawner : MonoBehaviour
     public float minDelay = .1f; 
     public float maxDelay = 1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(SpawnTrash()); //hiermit startet SpawnTrash() Methode
-    }
-
     IEnumerator SpawnTrash()
     {
         while (true) //quasi immer, aber Achtung das nicht allein benutzen, sonst stürzt alles ab
@@ -31,5 +25,15 @@ public class TrashSpawner : MonoBehaviour
             GameObject spawnedTrash= Instantiate(trashPrefabs[Random.Range(0, trashPrefabs.Length)], spawnPoint.position, spawnPoint.rotation); //Es wird ein Objekt Instantiatet (wir nennen es spawnedTrash), das unser festgelegtes TrashPrefab als Vorbild nimmt, und die Position und Rotation des eben ermittelten spawnPoint übernimmt
             Destroy(spawnedTrash, 5f); //nach 5Sekunden wird unser Objekt 
         }
+    }
+
+    public void StartTrashSpawn()
+    {
+        StartCoroutine("SpawnTrash");  //hiermit startet SpawnTrash() Methode
+    }
+
+    public void StopTrashSpawn()
+    {
+        StopCoroutine("SpawnTrash");  //hiermit stoppt SpawnTrash() Methode
     }
 }
