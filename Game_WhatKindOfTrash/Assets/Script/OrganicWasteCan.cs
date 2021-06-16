@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class OrganicWasteCan : MonoBehaviour
 {
     public Transform PointSpawnPosition; //position wo text spawnt
-
+    public AudioSource MyAudioSource;
+    public AudioSource MyOtherAudioSource;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,6 +17,7 @@ public class OrganicWasteCan : MonoBehaviour
             ScoreManager.instance.AddPoint();               // Zugriff auf ScoreManager Script -> erhöhe Score um +15
             GoodPoints.instance.AddGoodPoint();
             VisualFeedbackSpawner.Instance.SpawnPointsGood(PointSpawnPosition.position, "+15"); //+15 neben mülltonne
+            MyAudioSource.Play();
         }
         if (other.gameObject.CompareTag("PlasticWaste"))
         {
@@ -23,6 +25,7 @@ public class OrganicWasteCan : MonoBehaviour
             ScoreManager.instance.TakePoint();              // Zugriff auf ScoreManager Script -> erhöhe Score um -5
             BadPoints.instance.TakeBadPoint();
             VisualFeedbackSpawner.Instance.SpawnPointsBad(PointSpawnPosition.position, "-10"); //-10 neben mülltonne
+            MyOtherAudioSource.Play();
 
         }
     }

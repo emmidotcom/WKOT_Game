@@ -25,6 +25,7 @@ public class ScoreManager : MonoBehaviour
     {
         score += 15;
         scoreText.text = "x " + score.ToString();
+        
     }
 
     public void TakePoint()                         //Zweite Score Variante -5  ->  falsch zugeordnet

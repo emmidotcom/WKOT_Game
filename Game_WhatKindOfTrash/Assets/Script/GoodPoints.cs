@@ -6,7 +6,6 @@ using UnityEngine.UI;  //WICHTIG!!! Script muss auf UnityEngine.UI zugreifen kön
 public class GoodPoints : MonoBehaviour
 {
     public static GoodPoints instance;    //Script wird für andere Sripte verwendbar
-
     public Text scoreText;                  //Welcher Text ist gemeint
 
     int score =  0;                          //Score am Anfang 0
@@ -25,6 +24,7 @@ public class GoodPoints : MonoBehaviour
     {
         score += 15;
         scoreText.text = "+" + score.ToString();
+        
     }
 
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bottom : MonoBehaviour
 {
-
+    public AudioSource MyAudioSource;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("OrganicWaste")|| other.gameObject.CompareTag("PlasticWaste"))
@@ -14,6 +14,7 @@ public class Bottom : MonoBehaviour
             BottomPoints.instance.TakeBadPoint();
             Vector3 spawnPoint = other.transform.position;
             VisualFeedbackSpawner.Instance.SpawnPointsBad(spawnPoint, "-15"); //-15 auf Boden
+            MyAudioSource.Play();
         }
     }
 }

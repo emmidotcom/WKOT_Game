@@ -11,6 +11,8 @@ public class Countdown : MonoBehaviour
     public Image TimeImage;
     public Sprite TimeImageRed;
     public Sprite TimeImageGreen;
+    public AudioSource MyAudioSource;
+    public AudioSource MyOtherAudioSource;
 
     [SerializeField] Text countdownText;
 
@@ -32,12 +34,14 @@ public class Countdown : MonoBehaviour
             currentTime = 0;
             Manager.trashSpawner.StopTrashSpawn(); 
             GameOver.gameObject.SetActive(true);
+            MyOtherAudioSource.Play();
         }
 
         if (currentTime <= 10)
         {
             countdownText.color = Color.red;
             TimeImage.sprite = TimeImageRed;
+            MyAudioSource.Play();
 
         }
     }
@@ -47,6 +51,7 @@ public class Countdown : MonoBehaviour
         Running = true;
         currentTime = startingTime;
         GameOver.gameObject.SetActive(false);
+        
     }
 
     public void ResetCountdown()
