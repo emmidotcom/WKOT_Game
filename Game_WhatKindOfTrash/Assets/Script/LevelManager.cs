@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public Countdown countdown;
     public TrashSpawner trashSpawner;
     public GameObject EndTutorialButton;
+    public AudioSource MyHappySound;
 
     public GameObject Intro;
 
@@ -17,6 +18,7 @@ public class LevelManager : MonoBehaviour
         {
             EndTutorialButton.SetActive(false);
             Intro.SetActive(false);
+            MyHappySound.Play();
         }
         else if (levelIndex == 2)
         {

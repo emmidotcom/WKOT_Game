@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 30f; //hier Zeit die wir wollen
+    float startingTime = 15f; //hier Zeit die wir wollen
 
     public Image TimeImage;
     public Sprite TimeImageRed;
@@ -29,19 +29,24 @@ public class Countdown : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
 
+
         if (currentTime <= 0)
         {
             currentTime = 0;
             Manager.trashSpawner.StopTrashSpawn(); 
             GameOver.gameObject.SetActive(true);
-            MyOtherAudioSource.Play();
+        }
+
+        if (currentTime == 0) 
+        {
+            MyOtherAudioSource.PlayOneShot(MyOtherAudioSource.clip);
         }
 
         if (currentTime <= 10)
         {
             countdownText.color = Color.red;
             TimeImage.sprite = TimeImageRed;
-            MyAudioSource.Play();
+            MyAudioSource.PlayOneShot(MyAudioSource.clip);
 
         }
     }
