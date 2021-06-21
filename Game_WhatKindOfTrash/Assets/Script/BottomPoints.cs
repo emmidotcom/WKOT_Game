@@ -23,7 +23,7 @@ public class BottomPoints : MonoBehaviour
 
     public void TakeBadPoint()                          //Eine Score Variante +15  ->  richtig zugeordnet
     {
-        score += 10;
+        score += 15;
         scoreText.text = "-" + score.ToString();
     }
 

@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startForce: 14
+  minRotation: 60
+  maxRotation: 150
 --- !u!114 &-4657494077881588905
 MonoBehaviour:
   m_ObjectHideFlags: 0

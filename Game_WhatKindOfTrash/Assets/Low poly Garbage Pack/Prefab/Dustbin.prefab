@@ -267,6 +267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointSpawnPosition: {fileID: 457081874}
+  MyAudioSource: {fileID: 0}
+  MyOtherAudioSource: {fileID: 0}
 --- !u!1 &3131456047162373692
 GameObject:
   m_ObjectHideFlags: 0

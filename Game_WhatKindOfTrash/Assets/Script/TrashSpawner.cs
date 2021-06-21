@@ -23,7 +23,7 @@ public class TrashSpawner : MonoBehaviour
             Transform spawnPoint = spawnPoints[spawnIndex]; //aus unserer spawnPoints Liste/array wird das Element mit der Nummer, die im spawnIndex ermittelt wurde, als spawnPoint festgelegt
 
             GameObject spawnedTrash= Instantiate(trashPrefabs[Random.Range(0, trashPrefabs.Length)], spawnPoint.position, spawnPoint.rotation); //Es wird ein Objekt Instantiatet (wir nennen es spawnedTrash), das unser festgelegtes TrashPrefab als Vorbild nimmt, und die Position und Rotation des eben ermittelten spawnPoint übernimmt
-            Destroy(spawnedTrash, 5f); //nach 5Sekunden wird unser Objekt 
+            //Destroy(spawnedTrash, 5f); //nach 5Sekunden wird unser Objekt 
         }
     }
 

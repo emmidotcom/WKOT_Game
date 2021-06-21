@@ -11,8 +11,8 @@ public class Countdown : MonoBehaviour
     public Image TimeImage;
     public Sprite TimeImageRed;
     public Sprite TimeImageGreen;
-    public AudioSource MyAudioSource;
-    public AudioSource MyOtherAudioSource;
+    public AudioSource GameOverTon;
+    public AudioSource Ticking;
 
     [SerializeField] Text countdownText;
 
@@ -39,15 +39,15 @@ public class Countdown : MonoBehaviour
 
         if (currentTime == 0) 
         {
-            MyOtherAudioSource.PlayOneShot(MyOtherAudioSource.clip);
+            GameOverTon.PlayOneShot(GameOverTon.clip);
         }
 
+  
         if (currentTime <= 10)
         {
             countdownText.color = Color.red;
             TimeImage.sprite = TimeImageRed;
-            MyAudioSource.PlayOneShot(MyAudioSource.clip);
-
+            //Ticking.PlayOneShot(Ticking.clip);
         }
     }
 

@@ -5,9 +5,11 @@ using UnityEngine;
 public class Bottom : MonoBehaviour
 {
     public AudioSource MyAudioSource;
+    public Rigidbody2D Hans;
+    public GameObject HansSphere;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("OrganicWaste")|| other.gameObject.CompareTag("PlasticWaste"))
+        if (other.gameObject.CompareTag("hans")|| other.gameObject.CompareTag("hans"))
         {
             Destroy(other.gameObject);                          // wenn Tag richtig destroy OBJ
             ScoreManager.instance.AddTakePoint();               // Zugriff auf ScoreManager Script -> erhöhe Score um -10

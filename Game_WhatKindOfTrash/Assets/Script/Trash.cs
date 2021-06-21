@@ -9,8 +9,8 @@ public class Trash : MonoBehaviour
     public float startForce = 10f; //wir legen eine Zahl fest, um eine startForce generieren
 
     //Rotation Force
-    public float minRotation = 60;
-    public float maxRotation = 150;
+    public float minRotation = 40;
+    public float maxRotation = 90;
 
 
     // Start is called before the first frame update

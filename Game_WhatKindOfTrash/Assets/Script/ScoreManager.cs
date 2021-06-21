@@ -30,13 +30,13 @@ public class ScoreManager : MonoBehaviour
 
     public void TakePoint()                         //Zweite Score Variante -5  ->  falsch zugeordnet
     {
-        score -= 5;
+        score -= 10;
         scoreText.text = "x " + score.ToString();
     }
 
     public void AddTakePoint()                      //Dritte Score Variante -10  ->   garnicht zugeordnet/fällt auf den Boden
     {
-        score -= 10;
+        score -= 15;
         scoreText.text = "x " + score.ToString();
     }
 }
