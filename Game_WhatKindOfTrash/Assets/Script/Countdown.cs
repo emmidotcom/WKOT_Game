@@ -16,11 +16,15 @@ public class Countdown : MonoBehaviour
 
     [SerializeField] Text countdownText;
 
-    [SerializeField] Image GameOver;
+    public GameObject GameOver;
 
     public LevelManager Manager;
 
     bool Running = false;
+
+    public ScoreManager ScoreManager;
+    public GameObject NextLevelButton;
+    public GameObject PunkteFehlen;
 
     // Update is called once per frame
     void Update()
@@ -32,9 +36,19 @@ public class Countdown : MonoBehaviour
 
         if (currentTime <= 0)
         {
+            Running = false;
             currentTime = 0;
             Manager.trashSpawner.StopTrashSpawn(); 
             GameOver.gameObject.SetActive(true);
+
+            if (ScoreManager.score > 10)                 //Punkte die man braucht um Level zu bestehen hier angeben
+            {
+                NextLevelButton.SetActive(true);
+            }
+            else
+            {
+                PunkteFehlen.SetActive(true);
+            }
         }
 
         if (currentTime == 0) 

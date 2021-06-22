@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
 
     public Text scoreText;                  //Welcher Text ist gemeint
 
-    int score = 0;                          //Score am Anfang 0
+    public int score = 0;                          //Score am Anfang 0
 
     private void Awake()                    //Script wird für andere Sripte verwendbar             
     {

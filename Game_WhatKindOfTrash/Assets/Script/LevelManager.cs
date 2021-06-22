@@ -20,16 +20,7 @@ public class LevelManager : MonoBehaviour
             Intro.SetActive(false);
             MyHappySound.Play();
         }
-        else if (levelIndex == 2)
-        {
-
-        }
-        else if (levelIndex == 3)
-        {
-
-        }
-
-
+ 
         countdown.StartCountdown();
 
         trashSpawner.StartTrashSpawn();
