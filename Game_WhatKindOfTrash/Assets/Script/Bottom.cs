@@ -5,8 +5,7 @@ using UnityEngine;
 public class Bottom : MonoBehaviour
 {
     public AudioSource MyAudioSource;
-    public Rigidbody2D Hans;
-    public GameObject HansSphere;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("hans")|| other.gameObject.CompareTag("hans"))
@@ -18,6 +17,7 @@ public class Bottom : MonoBehaviour
             VisualFeedbackSpawner.Instance.SpawnPointsBad(spawnPoint, "-15"); //-15 auf Boden
             MyAudioSource.Play();
         }
+
     }
 }
 

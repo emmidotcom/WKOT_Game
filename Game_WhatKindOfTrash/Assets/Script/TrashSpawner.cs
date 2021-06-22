@@ -7,14 +7,19 @@ public class TrashSpawner : MonoBehaviour
 
     public GameObject[] trashPrefabs; //MüllPrefab im Inspector reinziehen
     public Transform[] spawnPoints; //Array aus den Spawnpoints, die ich gesetzt habe (auch im Inspector reinziehen)
+    public AudioSource Woosh;
 
     //festlegen einer mindest und höchst Wartezeit bis neues Objekt spawnt
     public float minDelay = .1f; 
     public float maxDelay = 1f;
 
+    bool wasCreated = false;
+
+
     IEnumerator SpawnTrash()
     {
         while (true) //quasi immer, aber Achtung das nicht allein benutzen, sonst stürzt alles ab
+
         {
             float delay = Random.Range(minDelay, maxDelay); //der delay Wert setzt sich aus einer Random ausgesuchten Zahl zwischen unserem festgelegten min und maxDelay
             yield return new WaitForSeconds(delay); //die Zahl die bei delay rausgekommen ist, wird hier als Zeitangabe genutzt um zu warten
@@ -24,7 +29,11 @@ public class TrashSpawner : MonoBehaviour
 
             GameObject spawnedTrash= Instantiate(trashPrefabs[Random.Range(0, trashPrefabs.Length)], spawnPoint.position, spawnPoint.rotation); //Es wird ein Objekt Instantiatet (wir nennen es spawnedTrash), das unser festgelegtes TrashPrefab als Vorbild nimmt, und die Position und Rotation des eben ermittelten spawnPoint übernimmt
             //Destroy(spawnedTrash, 5f); //nach 5Sekunden wird unser Objekt 
+            wasCreated = true;
+            Woosh.PlayOneShot(Woosh.clip);
         }
+
+
     }
 
     public void StartTrashSpawn()
