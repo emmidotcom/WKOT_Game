@@ -10853,7 +10853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1211507288
 Transform:
   m_ObjectHideFlags: 0
@@ -13419,7 +13419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1844635047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13440,7 +13440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: dir fehlen noch ___ Punkte um weiter zu spielen
+  m_text: "Das hat leider \nnicht gereicht!\nProbier's doch \nnochmal!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
   m_sharedMaterial: {fileID: 2580318812050920622, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
@@ -13479,7 +13479,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: -5
   m_wordSpacing: -10
-  m_lineSpacing: 0
+  m_lineSpacing: -10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -13533,8 +13533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -17.5}
-  m_SizeDelta: {x: 292.49, y: 50}
+  m_AnchoredPosition: {x: 12.7, y: -19.9}
+  m_SizeDelta: {x: 245.4, y: 141.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1845562443
 PrefabInstance:
