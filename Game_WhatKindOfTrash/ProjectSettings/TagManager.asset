@@ -8,6 +8,8 @@ TagManager:
   - PlasticWaste
   - hans
   - Atom
+  - PaperWaste
+  - SonderWaste
   layers:
   - Default
   - TransparentFX

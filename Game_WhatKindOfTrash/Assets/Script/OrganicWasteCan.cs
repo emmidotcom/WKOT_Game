@@ -28,6 +28,22 @@ public class OrganicWasteCan : MonoBehaviour
             MyOtherAudioSource.Play();
 
         }
+        if (other.gameObject.CompareTag("PaperWaste"))
+        {
+            Destroy(other.gameObject);                      // wenn Tag richtig destroy OBJ 
+            ScoreManager.instance.TakePoint();              // Zugriff auf ScoreManager Script -> erhöhe Score um -5
+            BadPoints.instance.TakeBadPoint();
+            VisualFeedbackSpawner.Instance.SpawnPointsBad(PointSpawnPosition.position, "-10"); //-10 neben mülltonne
+            MyOtherAudioSource.Play();
+        }
+        if (other.gameObject.CompareTag("SonderWaste"))
+        {
+            Destroy(other.gameObject);                      // wenn Tag richtig destroy OBJ 
+            ScoreManager.instance.TakePoint();              // Zugriff auf ScoreManager Script -> erhöhe Score um -5
+            BadPoints.instance.TakeBadPoint();
+            VisualFeedbackSpawner.Instance.SpawnPointsBad(PointSpawnPosition.position, "-10"); //-10 neben mülltonne
+            MyOtherAudioSource.Play();
+        }
     }
 }
 

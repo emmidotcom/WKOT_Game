@@ -135,9 +135,9 @@ GameObject:
   - component: {fileID: 33562022}
   - component: {fileID: 33562021}
   - component: {fileID: 33562020}
-  - component: {fileID: 33562019}
   - component: {fileID: 33562018}
   - component: {fileID: 33562017}
+  - component: {fileID: 33562019}
   m_Layer: 0
   m_Name: Dustbin 1
   m_TagString: Untagged
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 33562015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6d1d038d9c38ce4e939dfadd0ef3486, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c4d4958e066754d8a5f2e066cde6b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PointSpawnPosition: {fileID: 141631222}
@@ -1332,7 +1332,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f825a69251e4c9d478df1c36c948a97a, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 470243284, guid: 9a93671e36760fd45a6ab1f5bae940ab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9a93671e36760fd45a6ab1f5bae940ab, type: 3}
 --- !u!1001 &231866002
 PrefabInstance:
@@ -3396,6 +3397,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3637134996410565414, guid: 9c6178fe943216540b276b975dafae16, type: 3}
   m_PrefabInstance: {fileID: 1359290489}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &611335753 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 457081874, guid: 9a93671e36760fd45a6ab1f5bae940ab, type: 3}
+  m_PrefabInstance: {fileID: 227592195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &614522571
 GameObject:
   m_ObjectHideFlags: 0
@@ -4090,7 +4096,12 @@ MonoBehaviour:
   - {fileID: 7554862472761468196, guid: 152780db6dabefa4eabd22deacbd7144, type: 3}
   - {fileID: 7908497807855654738, guid: e279f6de662e0a4458a11a76ba871730, type: 3}
   - {fileID: 3715986646731043958, guid: c77f5e5f7e712e5499ad2301d79d530b, type: 3}
-  - {fileID: 2733645439879039245, guid: 00eb84be87015844c842d80a10447668, type: 3}
+  - {fileID: 7928650648340309057, guid: 0a1cc8316b991994d849b761b303243b, type: 3}
+  - {fileID: 1120608797679622894, guid: 58027cb8962613c40a79826b98ea6704, type: 3}
+  - {fileID: 4137255794297198216, guid: 92b9eb164bd347d4d87b7a36b56a7bd0, type: 3}
+  - {fileID: 928690798030226517, guid: 6eb579e8eb2e24642984c817627676b9, type: 3}
+  - {fileID: 781569317729285014, guid: 54a325b9d829a6b4bafcd29670e85527, type: 3}
+  - {fileID: 8265598609654666289, guid: 0744808742b411247bd12207b8a039bb, type: 3}
   spawnPoints:
   - {fileID: 189194864}
   - {fileID: 1969966016}
@@ -5538,6 +5549,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &825258747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825258743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c607937d8d173e4abcf20fe1696617d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointSpawnPosition: {fileID: 611335753}
+  MyAudioSource: {fileID: 825258746}
+  MyOtherAudioSource: {fileID: 825258745}
 --- !u!1001 &834516771
 PrefabInstance:
   m_ObjectHideFlags: 0
