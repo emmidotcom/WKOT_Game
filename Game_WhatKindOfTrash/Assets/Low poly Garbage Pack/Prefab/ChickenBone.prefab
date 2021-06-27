@@ -133,8 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startForce: 14
-  minRotation: 20
-  maxRotation: 30
+  minRotation: 10
+  maxRotation: 20
 --- !u!70 &9061626489521472636
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.63
 --- !u!1001 &7155540512153539725
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -27,6 +27,11 @@ public class Countdown : MonoBehaviour
     public GameObject PunkteFehlen;
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        Ticking.PlayDelayed(6.0f);
+    }
     void Update()
     {
         if (!Running) return;

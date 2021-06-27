@@ -7,6 +7,7 @@ TagManager:
   - OrganicWaste
   - PlasticWaste
   - hans
+  - Atom
   layers:
   - Default
   - TransparentFX

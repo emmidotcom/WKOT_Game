@@ -2546,7 +2546,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cfaac9db11f43a442995a21cb4805607, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10313,7 +10313,17 @@ MonoBehaviour:
   - "restm\xFCll"
   - super
   - "papierm\xFCll"
-  - plastik
+  - "Sonderm\xFCll wie beispielsweise Batterien darf nicht mit dem normalen Hausm\xFCll
+    entsorgt werden. Chemikalien, giftige oder explosive Stoffe k\xF6nnten auf Deponien
+    oder in M\xFCllverbrennungsanlagen gro\xDFen Schaden anrichten.\r\n\r\nAllerdings
+    ist oft gar nicht klar, was schon Sonderabfall ist. Leere Nagellack-Flaschen
+    geh\xF6ren eigentlich nicht in den Hausm\xFCll, denn der Lack enth\xE4lt Chemikalien.\r\n\r\nDie
+    einzelne kleine Flasche schadet der Umwelt nat\xFCrlich nicht, aber es kommt
+    wie so oft auf die Menge an. Und auf einer einzigen M\xFCllkippe k\xF6nnen sehr
+    schnell mehrere Hunderttausend Nagellack-Fl\xE4schchen zusammenkommen. Auch in
+    Putz- und Desinfektionsmitteln sind sch\xE4dliche chemische Stoffe enthalten.
+    Werden die Flaschen nicht v\xF6llig entleert, sollte man sie lieber gesondert
+    entsorgen. K\xFChlschr\xE4nke, Motor\xF6l, alte Computer oder Haus- und Hobbychemikalien"
   - <i> ende</i>
   TextL: {fileID: 1988710715}
   TextR: {fileID: 358405951}
@@ -10963,8 +10973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -545.8666, y: -125.607056}
-  m_SizeDelta: {x: 233.97, y: 50}
+  m_AnchoredPosition: {x: -543.8, y: -59.8}
+  m_SizeDelta: {x: 464.2, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988710715
 MonoBehaviour:
@@ -10986,7 +10996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "INFO \n\nRecycling ist super PUNKT ENDE AUS !!!"
+  m_text: gggg
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
   m_sharedMaterial: {fileID: 2580318812050920622, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
@@ -11013,8 +11023,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 39.76
+  m_fontSizeBase: 39.76
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
