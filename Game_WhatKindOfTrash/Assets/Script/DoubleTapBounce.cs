@@ -31,7 +31,7 @@ public class DoubleTapBounce : MonoBehaviour
             rigidbody.velocity = Vector3.zero;
             rigidbody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);       //OBJ jumped/bounced mit TapForce (Stärke des Bounce)
             transform.rotation = Quaternion.Lerp(transform.rotation, downRotation, tiltSmooth * Time.deltaTime);        //Fall-Rotation nur während OBJ angeklickt wird
-            transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+            //transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
         }
         
     }
