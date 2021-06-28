@@ -9,6 +9,10 @@ public class DoubleTapBounce : MonoBehaviour
     public float tiltSmooth = 2;                            //Smoothnes des Bounce -> in Unity selbst variierbar
     public Vector3 startPos;
 
+    //float currentx= 100%
+    //float currenty= 100%
+    //float currentz= 100%
+
     Rigidbody2D rigidbody;                                  //OBJ einbinden
     Quaternion downRotation;                                //Fall-Rotation OBj
     Quaternion forwardRotation;                             //Jump-Rotation OBj

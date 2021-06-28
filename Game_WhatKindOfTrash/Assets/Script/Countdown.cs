@@ -25,6 +25,8 @@ public class Countdown : MonoBehaviour
     public ScoreManager ScoreManager;
     public GameObject NextLevelButton;
     public GameObject PunkteFehlen;
+    public GameObject SchildiHappy;
+    public GameObject SchildiSad;
 
     // Update is called once per frame
 
@@ -49,10 +51,13 @@ public class Countdown : MonoBehaviour
             if (ScoreManager.score > 10)                 //Punkte die man braucht um Level zu bestehen hier angeben
             {
                 NextLevelButton.SetActive(true);
+                SchildiHappy.SetActive(true);
+
             }
             else
             {
                 PunkteFehlen.SetActive(true);
+                SchildiSad.SetActive(true);
             }
         }
 
