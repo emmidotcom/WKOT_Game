@@ -21,12 +21,16 @@ public class Countdown : MonoBehaviour
     public LevelManager Manager;
 
     bool Running = false;
+   // public bool isPaused;
 
     public ScoreManager ScoreManager;
     public GameObject NextLevelButton;
     public GameObject PunkteFehlen;
     public GameObject SchildiHappy;
     public GameObject SchildiSad;
+    public GameObject Recycling1;
+    public GameObject Recycling2;
+    public GameObject Recycling3;
 
     // Update is called once per frame
 
@@ -47,21 +51,37 @@ public class Countdown : MonoBehaviour
             currentTime = 0;
             Manager.trashSpawner.StopTrashSpawn(); 
             GameOver.gameObject.SetActive(true);
+           // isPaused = true;
+           // Time.timeScale = 0f;
+            
 
-            if (ScoreManager.score > 10)                 //Punkte die man braucht um Level zu bestehen hier angeben
+            if (ScoreManager.score > 30)                 //Punkte die man braucht um Level zu bestehen hier angeben
             {
                 NextLevelButton.SetActive(true);
                 SchildiHappy.SetActive(true);
+                Recycling1.SetActive(true);
+                Recycling2.SetActive(true);
 
             }
+
             else
             {
                 PunkteFehlen.SetActive(true);
                 SchildiSad.SetActive(true);
+                Recycling1.SetActive(true);
             }
-        }
+           
+            
+            if (ScoreManager.score > 100)
+            {
 
-        if (currentTime == 0) 
+                Recycling3.SetActive(true);
+
+            }
+
+            }
+
+            if (currentTime == 0) 
         {
             GameOverTon.PlayOneShot(GameOverTon.clip);
         }
