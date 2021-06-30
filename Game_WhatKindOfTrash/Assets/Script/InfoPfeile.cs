@@ -10,6 +10,7 @@ public class InfoPfeile : MonoBehaviour
     public string[] InfoElemente;
     public TextMeshProUGUI TextL;
     public TextMeshProUGUI TextR;
+    public GameObject firstPageBilder;
 
     int AktuellesElement = 0;
     
@@ -23,7 +24,12 @@ public class InfoPfeile : MonoBehaviour
     {
         if (AktuellesElement < InfoElemente.Length-2)
         {
-            AktuellesElement+=2;
+            if (AktuellesElement == 0)
+            {
+                firstPageBilder.SetActive(false);
+            }
+
+            AktuellesElement +=2;
             TextL.text = InfoElemente[AktuellesElement];
             TextR.text = InfoElemente[AktuellesElement + 1];
         }
@@ -36,6 +42,11 @@ public class InfoPfeile : MonoBehaviour
             AktuellesElement-=2;
             TextL.text = InfoElemente[AktuellesElement];
             TextR.text = InfoElemente[AktuellesElement + 1];
+
+            if (AktuellesElement == 0)
+            {
+                firstPageBilder.SetActive(true);
+            }
         }
     }
 

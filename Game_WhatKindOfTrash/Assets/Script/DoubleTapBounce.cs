@@ -9,9 +9,12 @@ public class DoubleTapBounce : MonoBehaviour
     public float tiltSmooth = 2;                            //Smoothnes des Bounce -> in Unity selbst variierbar
     public Vector3 startPos;
 
-    //float currentx= 100%
-    //float currenty= 100%
-    //float currentz= 100%
+    public int Tapsleft=5;                                  //so oft muss man tippen damit atom müll verschwindet
+    public float shrinkValue=0.1f;                           //prozenturale verkleinerung des Atommülls
+    public float SpamDelay=0.18f;                                 //damit man atommüll nicht spammen kann
+    private float SpamDelayEnd;
+
+    public float SpinForce=50;                                 //Rotationsdrall beim klicken
 
     Rigidbody2D rigidbody;                                  //OBJ einbinden
     Quaternion downRotation;                                //Fall-Rotation OBj
@@ -20,7 +23,7 @@ public class DoubleTapBounce : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         downRotation = Quaternion.Euler(0, 0, 30);          //Fall-Rotation festlegen zB 30
-        forwardRotation = Quaternion.Euler(0, 0, -30);      //Jump-Rotation festlegen zB -30
+       // forwardRotation = Quaternion.Euler(0, 0, -30);      //Jump-Rotation festlegen zB -30
     }
 
 
@@ -29,13 +32,25 @@ public class DoubleTapBounce : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        if (!IngameMenu.Instance.isPaused)
+        if (!IngameMenu.Instance.isPaused&&Countdown.Instance.Running)
         {
-            transform.rotation = forwardRotation;           //Jump-Rotation tritt ein
+            if (SpamDelayEnd <= Time.time)
+            {
+                SpamDelayEnd = Time.time + SpamDelay;       //hier wird der delay gesetzt
+            }
+            else return;
+
+            rigidbody.AddTorque(SpinForce);                        //Jump-Rotation tritt ein
             rigidbody.velocity = Vector3.zero;
             rigidbody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);       //OBJ jumped/bounced mit TapForce (Stärke des Bounce)
             transform.rotation = Quaternion.Lerp(transform.rotation, downRotation, tiltSmooth * Time.deltaTime);        //Fall-Rotation nur während OBJ angeklickt wird
-            //transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+            transform.localScale*= 1 - shrinkValue;
+
+            Tapsleft--;
+            if (Tapsleft == 0)
+            {
+                Destroy(gameObject);
+            }
         }
         
     }

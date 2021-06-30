@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour
 {
+    public static Countdown Instance;
     float currentTime = 0f;
     float startingTime = 15f; //hier Zeit die wir wollen
 
@@ -20,7 +21,7 @@ public class Countdown : MonoBehaviour
 
     public LevelManager Manager;
 
-    bool Running = false;
+    public bool Running = false;
    // public bool isPaused;
 
     public ScoreManager ScoreManager;
@@ -32,7 +33,13 @@ public class Countdown : MonoBehaviour
     public GameObject Recycling2;
     public GameObject Recycling3;
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        if (Instance == null) //darf nur einmal existieren
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {

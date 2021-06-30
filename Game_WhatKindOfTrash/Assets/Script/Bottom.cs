@@ -8,7 +8,7 @@ public class Bottom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("hans")|| other.gameObject.CompareTag("hans"))
+        if (Countdown.Instance.Running && other.gameObject.CompareTag("hans"))
         {
             Destroy(other.gameObject);                          // wenn Tag richtig destroy OBJ
             ScoreManager.instance.AddTakePoint();               // Zugriff auf ScoreManager Script -> erhöhe Score um -10

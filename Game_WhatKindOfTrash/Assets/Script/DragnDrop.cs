@@ -8,7 +8,7 @@ public class DragnDrop : MonoBehaviour
 
     void OnMouseDown()                                          //Wenn Maus gedrückt OBJ wird Kinematic (Starr) und kann bewegt werden
     {
-        if (!IngameMenu.Instance.isPaused)                        //ausführen falls nicht pausiert -> damit man sachen im pause ned bewegen kann
+        if (!IngameMenu.Instance.isPaused && Countdown.Instance.Running)                        //ausführen falls nicht pausiert -> damit man sachen im pause ned bewegen kann
         {
             Pressed = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;  //dann fällts einfach runter
@@ -20,7 +20,7 @@ public class DragnDrop : MonoBehaviour
     }
     void OnMouseUp()                                            //Wenn Maus losgelassen OBJ wird Dynamik und bewegt sich wie zuvor weiter
     {
-        if (!IngameMenu.Instance.isPaused)                       //ausführen falls nicht pausiert -> damit man sachen im pause ned bewegen kann
+        if (!IngameMenu.Instance.isPaused && Countdown.Instance.Running)                       //ausführen falls nicht pausiert -> damit man sachen im pause ned bewegen kann
         {
             Pressed = false;
             GetComponent<Rigidbody2D>().isKinematic = false;
@@ -32,8 +32,13 @@ public class DragnDrop : MonoBehaviour
     {
         if (Pressed)                                             //Maus Gedrückt halten -> OBJ folgt Mausposition
         {
-            if (IngameMenu.Instance.isPaused)                  //wenn man Objekt in Hand hat und dann escape drückt konnte man schummeln 
+            if (!Countdown.Instance.Running)
             {
+                Pressed = false;
+            }
+
+            else if (IngameMenu.Instance.isPaused)              //wenn man Objekt in Hand hat und dann escape drückt konnte man schummeln 
+            { 
                 Pressed = false;
                 GetComponent<Rigidbody2D>().isKinematic = false;
             }
