@@ -967,7 +967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 153, y: -62}
+  m_AnchoredPosition: {x: 153, y: -38}
   m_SizeDelta: {x: 465, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358405951
@@ -992,8 +992,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
-  m_sharedMaterial: {fileID: 2580318812050920622, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
+  m_sharedMaterial: {fileID: -6647499296520911746, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10666,37 +10666,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InfoElemente:
-  - "\n\n\t \n\tPlastik M\xFCll \n\n\t\t   \n\t\t    Bio M\xFCll\n\n\n\t  Papier
-    M\xFCll\n\n\n\n\t      SonderM\xFCll\n"
-  - "<font=\"Nove SDF\">Recycling</font>\nRecycling ist \u201Ejedes Verwertungsverfahren,
+  - "<font=\"Nove SDF_Extended\">Welcher M\xFCll ist welcher?</font>\n\n\t \n\tPlastik
+    M\xFCll \n\n\t\t   \n\t\t    Bio M\xFCll\n\n\n\t  Papier M\xFCll\n\n\n\n\t     
+    SonderM\xFCll\n"
+  - "<font=\"Nove SDF_Extended\">Recycling</font>\n\nRecycling ist \u201Ejedes Verwertungsverfahren,
     durch das Abf\xE4lle zu Erzeugnissen, Materialien oder Stoffen entweder f\xFCr
     den urspr\xFCnglichen Zweck oder f\xFCr andere Zwecke aufbereitet werden.\u201C
     .Wortw\xF6rtlich \xFCbersetzt bedeutet der Begriff Wiederverwertung oder Wiederaufbereitung.
     Recycling beinhaltet gleichzeitig auch den Kreislauf, den die Rohstoffe wieder
     und wieder durchlaufen."
-  - "Jedes Jahr werden 300 Millionen Tonnen Plastik hergestellt. Es kann Jahrzehnte
-    dauern, bis sich eine achtlos weggeworfene Getr\xE4nkeflasche aus Plastik in
-    der Umwelt vollst\xE4ndig aufgel\xF6st hat, was gro\xDFe \xF6kologische Sch\xE4den
-    anrichtet. In den gelben Sack geh\xF6ren Verpackungen aus Kunststoff, Wei\xDFblech
-    und Aluminium \u2013 das sind zum Beispiel Folien, Tuben, Konservendosen oder
-    Plastikt\xFCten. "
-  - "Welche Bioabf\xE4lle auf lokaler Ebene tats\xE4chlich \xFCber die Biotonne getrennt
-    gesammelt werden k\xF6nnen, h\xE4ngt insbesondere von den Verwertungsm\xF6glichkeiten,
-    Behandlungsanlagen und der Kommune ab. Grunds\xE4tzlich darf die Biotonne nur
-    mit organischen K\xFCchen- und Gartenabf\xE4llen bef\xFCllt werden , das bedeutet
-    alles was zur Kompostierung geeignet ist. Pflanzenreste, Obst- und Gem\xFCseabf\xE4lle
-    etc."
-  - "Die Herstellung von Papier belastet die Umwelt stark. Sie ben\xF6tigt viel Holz,
-    Energie und Wasser und kann zu Chemikalien in Gew\xE4sser f\xFChren. Zeitungen
-    o.\xE4., Verpackungen aus Pappe oder Geschenkpapier geh\xF6ren in die Papiertonne.
-    Sogenanntes Fax und Thermodruckerpapier ist jedoch Tabu m\xFCssen im Restm\xFCll
-    entsorgt werden. F\xFCr fast jeden Papierbedarf gibt es ein passendes Recyclingpapier,
-    welches fast \xFCberall bedenkenlos eingesetzt werden. "
-  - "Produkte mit sch\xE4dlichen Inhaltsstoffen d\xFCrfen nicht in die Restm\xFClltonne
-    geworfen werden, da so in die Umwelt gelangen k\xF6nnen. Dazu geh\xF6ren etwa
-    Reinigungsmittel, nicht vollst\xE4ndig geleerte Spraydosen, Gartenchemikalien
-    und Thermometer. Sonderabf\xE4lle kann man in haushalts\xFCblichen Mengen bei
-    kommunalen Sammelstellen kostenlos abgeben."
+  - "<font=\"Nove SDF_Extended\">Plastik</font>\n\nJedes Jahr werden 300 Millionen
+    Tonnen Plastik hergestellt. Es kann Jahrzehnte dauern, bis sich eine achtlos
+    weggeworfene Getr\xE4nkeflasche aus Plastik in der Umwelt vollst\xE4ndig aufgel\xF6st
+    hat, was gro\xDFe \xF6kologische Sch\xE4den anrichtet. In den gelben Sack geh\xF6ren
+    Verpackungen aus Kunststoff, Wei\xDFblech und Aluminium \u2013 das sind zum Beispiel
+    Folien, Tuben, Konservendosen oder Plastikt\xFCten. "
+  - "<font=\"Nove SDF_Extended\">Biotonne</font>\n\nWelche Bioabf\xE4lle auf lokaler
+    Ebene tats\xE4chlich \xFCber die Biotonne getrennt gesammelt werden k\xF6nnen,
+    h\xE4ngt insbesondere von den Verwertungsm\xF6glichkeiten, Behandlungsanlagen
+    und der Kommune ab. Grunds\xE4tzlich darf die Biotonne nur mit organischen K\xFCchen-
+    und Gartenabf\xE4llen bef\xFCllt werden , das bedeutet alles was zur Kompostierung
+    geeignet ist. Pflanzenreste, Obst- und Gem\xFCseabf\xE4lle etc."
+  - "<font=\"Nove SDF_Extended\">Papierm\xFCll</font>\n\nDie Herstellung von Papier
+    belastet die Umwelt stark. Sie ben\xF6tigt viel Holz, Energie und Wasser und
+    kann zu Chemikalien in Gew\xE4sser f\xFChren. Zeitungen o.\xE4., Verpackungen
+    aus Pappe oder Geschenkpapier geh\xF6ren in die Papiertonne. Sogenanntes Fax
+    und Thermodruckerpapier ist jedoch Tabu m\xFCssen im Restm\xFCll entsorgt werden.
+    F\xFCr fast jeden Papierbedarf gibt es ein passendes Recyclingpapier, welches
+    fast \xFCberall bedenkenlos eingesetzt werden. "
+  - "<font=\"Nove SDF_Extended\">Sonderm\xFCll</font>\n\nProdukte mit sch\xE4dlichen
+    Inhaltsstoffen d\xFCrfen nicht in die Restm\xFClltonne geworfen werden, da so
+    in die Umwelt gelangen k\xF6nnen. Dazu geh\xF6ren etwa Reinigungsmittel, nicht
+    vollst\xE4ndig geleerte Spraydosen, Gartenchemikalien und Thermometer. Sonderabf\xE4lle
+    kann man in haushalts\xFCblichen Mengen bei kommunalen Sammelstellen kostenlos
+    abgeben."
   TextL: {fileID: 1988710715}
   TextR: {fileID: 358405951}
   firstPageBilder: {fileID: 589617764}
@@ -11421,7 +11424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: -62}
+  m_AnchoredPosition: {x: -540, y: -38}
   m_SizeDelta: {x: 465, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988710715
@@ -11448,8 +11451,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
-  m_sharedMaterial: {fileID: 2580318812050920622, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
+  m_sharedMaterial: {fileID: -6647499296520911746, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

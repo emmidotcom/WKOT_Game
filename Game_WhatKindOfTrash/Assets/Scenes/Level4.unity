@@ -853,12 +853,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Weil das grad eben so gut geklappt hat kommt jetzt eine weitere Sorte
-    an Abfall dazu. Wenn du mehr \xFCber sie erfahren willst, schau im Hauptmen\xFC
-    unter Infos nach!"
+  m_text: "Wie wirst du dich bei 4 Sorten M\xFCll anstellen? Neu dabei ist der Sonderm\xFCll!
+    Lies dir vorher gerne nocheinmal alles \xFCber ihn durch."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
-  m_sharedMaterial: {fileID: 2580318812050920622, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
+  m_sharedMaterial: {fileID: -6647499296520911746, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11069,6 +11068,7 @@ MonoBehaviour:
   countdownText: {fileID: 1910253621}
   GameOver: {fileID: 655834035}
   Manager: {fileID: 2143737206}
+  Running: 0
   ScoreManager: {fileID: 1937854732}
   NextLevelButton: {fileID: 1368510488}
   PunkteFehlen: {fileID: 1396597255}

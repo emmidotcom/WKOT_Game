@@ -6330,10 +6330,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Hey Du!\nMagst du mir helfen den Strand sauber zu halten? \nZiehe dazu
-    einfach den Abfall in die richtige Tonne."
+    einfach den M\xFCll in die richtige Tonne."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
-  m_sharedMaterial: {fileID: 2580318812050920622, guid: a9f3440197c29ac4696173086332f6ba, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
+  m_sharedMaterial: {fileID: -6647499296520911746, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7174,6 +7174,7 @@ MonoBehaviour:
   countdownText: {fileID: 1273651487}
   GameOver: {fileID: 399019910}
   Manager: {fileID: 1648946307}
+  Running: 0
   ScoreManager: {fileID: 457725451}
   NextLevelButton: {fileID: 1039662030}
   PunkteFehlen: {fileID: 1844635046}
