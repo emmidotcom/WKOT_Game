@@ -5,19 +5,21 @@ using UnityEngine;
 public class Bottom : MonoBehaviour
 
 {
-    public static Bottom Instance;
+    //public static Bottom Instance;
 
     public AudioSource MyAudioSource;
 
-    public bool AtomKatastrophe = false;
+   // public bool AtomKatastrophe;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
+   // private void Awake()
+   // {
+     //    Instance = this;
+   // }
+
+   // private void Start()
+   // {
+    //    AtomKatastrophe = false;
+   // }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,11 +33,11 @@ public class Bottom : MonoBehaviour
             MyAudioSource.Play();
         }
 
-        if (Countdown.Instance.Running && other.gameObject.CompareTag("Atom"))
-        {
-            AtomKatastrophe = true;
-            Destroy(other.gameObject);
-        }
+       // if (Countdown.Instance.Running && other.gameObject.CompareTag("Atom"))
+        //{
+          //  AtomKatastrophe = true;
+          //  Destroy(other.gameObject);
+        //}
 
     }
 }

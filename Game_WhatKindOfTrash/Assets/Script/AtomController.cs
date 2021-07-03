@@ -10,6 +10,8 @@ public class AtomController : MonoBehaviour
     public int intervallLeft = 5;                   //anzahl wie oft es blinkt
     public float blinkDuration = 0.5f;              //wie schnell blinkts
 
+    public AudioSource AtomAlarm;
+
     private void Awake()
     {
         Atommuell.SetActive(false);
@@ -27,15 +29,13 @@ public class AtomController : MonoBehaviour
         yield return new WaitUntil(()=>Countdown.Instance.Running);
         yield return new WaitForSeconds(SpawnDelay);
 
+        AtomAlarm.PlayOneShot(AtomAlarm.clip);
+
         while (intervallLeft > 0)
         {
             blinkGameObject.SetActive(!blinkGameObject.activeSelf);
             yield return new WaitForSeconds(blinkDuration);
 
-           // if (intervallLeft % 2 == 0)             // % bedeutet "modulo" also der rest (bei jedem 2. blinken wird ton gespielt)
-            {
-              //  ton spielen
-            }
 
             intervallLeft--;
 
