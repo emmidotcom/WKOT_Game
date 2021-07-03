@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour
 {
+    Bottom myAtomBottom;
+    public AudioSource MyAtomSource;
+    public GameObject AtomGameOver;
+
+
     public static Countdown Instance;
     float currentTime = 0f;
     float startingTime = 15f; //hier Zeit die wir wollen
@@ -41,6 +46,7 @@ public class Countdown : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
         Ticking.PlayDelayed(6.0f);
@@ -51,56 +57,77 @@ public class Countdown : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
 
+        if (!myAtomBottom.AtomKatastrophe)
+        {
 
-        if (currentTime <= 0)
+            if (currentTime <= 0)
+            {
+                Running = false;
+                currentTime = 0;
+                Manager.trashSpawner.StopTrashSpawn();
+                GameOver.gameObject.SetActive(true);
+
+
+
+                if (ScoreManager.score > 30)                 //Punkte die man braucht um Level zu bestehen hier angeben
+                {
+                    NextLevelButton.SetActive(true);
+                    SchildiHappy.SetActive(true);
+                    Recycling1.SetActive(true);
+                    Recycling2.SetActive(true);
+
+                }
+
+                else
+                {
+                    PunkteFehlen.SetActive(true);
+                    SchildiSad.SetActive(true);
+                    Recycling1.SetActive(true);
+                }
+
+
+                if (ScoreManager.score > 100)
+                {
+
+                    Recycling3.SetActive(true);
+
+                }
+
+            }
+        }
+        if (myAtomBottom.AtomKatastrophe)
         {
             Running = false;
             currentTime = 0;
-            Manager.trashSpawner.StopTrashSpawn(); 
-            GameOver.gameObject.SetActive(true);
-           // isPaused = true;
-           // Time.timeScale = 0f;
+            Manager.trashSpawner.StopTrashSpawn();
+            AtomGameOver.SetActive(true); 
             
-
-            if (ScoreManager.score > 30)                 //Punkte die man braucht um Level zu bestehen hier angeben
+            if (currentTime == 0)
             {
-                NextLevelButton.SetActive(true);
-                SchildiHappy.SetActive(true);
-                Recycling1.SetActive(true);
-                Recycling2.SetActive(true);
-
+                MyAtomSource.Play();
             }
-
-            else
-            {
-                PunkteFehlen.SetActive(true);
-                SchildiSad.SetActive(true);
-                Recycling1.SetActive(true);
-            }
-           
-            
-            if (ScoreManager.score > 100)
-            {
-
-                Recycling3.SetActive(true);
-
-            }
-
-            }
-
-            if (currentTime == 0) 
+        }
+        if (!myAtomBottom.AtomKatastrophe)
         {
-            GameOverTon.PlayOneShot(GameOverTon.clip);
+            if (currentTime == 0)
+            {
+                GameOverTon.PlayOneShot(GameOverTon.clip);
+            }
         }
 
-  
+
+
+
+
         if (currentTime <= 10)
         {
             countdownText.color = Color.red;
             TimeImage.sprite = TimeImageRed;
-            //Ticking.PlayOneShot(Ticking.clip);
         }
     }
+
+    
+
 
     public void StartCountdown()
     {

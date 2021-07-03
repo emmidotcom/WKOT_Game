@@ -596,14 +596,14 @@ RectTransform:
   m_GameObject: {fileID: 165567716}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -6.1029587}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 589617765}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -262.7804, y: 131.46329}
+  m_AnchoredPosition: {x: -277, y: 157}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165567718
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f0ce97271d9ae0b4f9901d3d6ffa52b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c30a52273f41a040b3b16f41529cc90, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -745,14 +745,14 @@ RectTransform:
   m_GameObject: {fileID: 321613573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -6.1029587}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 589617765}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53.219604, y: 13.463287}
+  m_AnchoredPosition: {x: 69, y: 25}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &321613575
@@ -775,7 +775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 17f0cadfb0ed271459a6e2b6a5cfe3d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0eb167c30231df843a5e220d6179cb70, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3191,14 +3191,14 @@ RectTransform:
   m_GameObject: {fileID: 891766438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -6.1029587}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 589617765}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106.219604, y: 273.46326}
+  m_AnchoredPosition: {x: 69, y: 290}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &891766440
@@ -3221,7 +3221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4cc9cff23039c146adfbd1dc9222d4c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 701352909d8fec14792f63cf139f0194, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -10666,22 +10666,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InfoElemente:
-  - "<font=\"Nove SDF_Extended\">Welcher M\xFCll ist welcher?</font>\n\n\t \n\tPlastik
-    M\xFCll \n\n\t\t   \n\t\t    Bio M\xFCll\n\n\n\t  Papier M\xFCll\n\n\n\n\t     
-    SonderM\xFCll\n"
+  - "<font=\"Nove SDF_Extended\">Welcher M\xFCll ist welcher?\n\n\t \n\t\n\t\n\t  
+    Plastik M\xFCll \n   \n\n\t     \n\n\t           Bio M\xFCll\n\n\n\t \n\t  \n\t    
+    Papier M\xFCll\n\n\n\t  \n\t  \n\t    Sonder M\xFCll</font>"
   - "<font=\"Nove SDF_Extended\">Recycling</font>\n\nRecycling ist \u201Ejedes Verwertungsverfahren,
     durch das Abf\xE4lle zu Erzeugnissen, Materialien oder Stoffen entweder f\xFCr
     den urspr\xFCnglichen Zweck oder f\xFCr andere Zwecke aufbereitet werden.\u201C
     .Wortw\xF6rtlich \xFCbersetzt bedeutet der Begriff Wiederverwertung oder Wiederaufbereitung.
     Recycling beinhaltet gleichzeitig auch den Kreislauf, den die Rohstoffe wieder
     und wieder durchlaufen."
-  - "<font=\"Nove SDF_Extended\">Plastik</font>\n\nJedes Jahr werden 300 Millionen
+  - "<font=\"Nove SDF_Extended\">Plastikm\xFCll</font>\n\nJedes Jahr werden 300 Millionen
     Tonnen Plastik hergestellt. Es kann Jahrzehnte dauern, bis sich eine achtlos
     weggeworfene Getr\xE4nkeflasche aus Plastik in der Umwelt vollst\xE4ndig aufgel\xF6st
     hat, was gro\xDFe \xF6kologische Sch\xE4den anrichtet. In den gelben Sack geh\xF6ren
     Verpackungen aus Kunststoff, Wei\xDFblech und Aluminium \u2013 das sind zum Beispiel
     Folien, Tuben, Konservendosen oder Plastikt\xFCten. "
-  - "<font=\"Nove SDF_Extended\">Biotonne</font>\n\nWelche Bioabf\xE4lle auf lokaler
+  - "<font=\"Nove SDF_Extended\">Biom\xFCll</font>\n\nWelche Bioabf\xE4lle auf lokaler
     Ebene tats\xE4chlich \xFCber die Biotonne getrennt gesammelt werden k\xF6nnen,
     h\xE4ngt insbesondere von den Verwertungsm\xF6glichkeiten, Behandlungsanlagen
     und der Kommune ab. Grunds\xE4tzlich darf die Biotonne nur mit organischen K\xFCchen-
@@ -11342,14 +11342,14 @@ RectTransform:
   m_GameObject: {fileID: 1979771941}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -6.1029587}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 589617765}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -269.7804, y: 383.46326}
+  m_AnchoredPosition: {x: -277, y: 426}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979771943
@@ -11372,7 +11372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 07cff096e39e7c94e8c729c7a3d9d34f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e998cb4e390fa9643bbcf9c7163b5fd8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -11447,9 +11447,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'halllooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-
-'
+  m_text: "<font=\"Nove SDF_Extended\">Welcher M\xFCll ist welcher?\n\n\t \n\t\n\t\n\t  
+    Plastik M\xFCll \n   \n\n\t     \n\n\t           Bio M\xFCll\n\n\n\t \n\t  \n\t    
+    Papier M\xFCll\n\n\n\t  \n\t  \n\t    Sonder M\xFCll</font>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}
   m_sharedMaterial: {fileID: -6647499296520911746, guid: bda1d2db127c88a4c826bc84e6215c08, type: 2}

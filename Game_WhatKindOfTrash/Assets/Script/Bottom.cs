@@ -3,8 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bottom : MonoBehaviour
+
 {
+    public static Bottom Instance;
+
     public AudioSource MyAudioSource;
+
+    public bool AtomKatastrophe = false;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,6 +29,12 @@ public class Bottom : MonoBehaviour
             Vector3 spawnPoint = other.transform.position;
             VisualFeedbackSpawner.Instance.SpawnPointsBad(spawnPoint, "-15"); //-15 auf Boden
             MyAudioSource.Play();
+        }
+
+        if (Countdown.Instance.Running && other.gameObject.CompareTag("Atom"))
+        {
+            AtomKatastrophe = true;
+            Destroy(other.gameObject);
         }
 
     }
