@@ -193,6 +193,7 @@ MonoBehaviour:
   TimeImageGreen: {fileID: 21300000, guid: 602e495bc3a0ea14c8c70175443e42f5, type: 3}
   GameOverTon: {fileID: 12531672}
   Ticking: {fileID: 12531671}
+  HotTime: 0
   countdownText: {fileID: 1495976731}
   GameOver: {fileID: 1552677944}
   Manager: {fileID: 1702751286}
@@ -19538,6 +19539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b661eb35ff7224db05adb58074f218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LastLevelInfo: {fileID: 0}
 --- !u!222 &1552677947
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20748,7 +20750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4f8354d80ec4843ad164522f4cb458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapForce: 100
+  tapForce: 500
   tiltSmooth: 2
   startPos: {x: 0, y: 0, z: 0}
   Tapsleft: 5
@@ -21551,7 +21553,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 65a910c03933763409796cf35411ad85, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -26802,6 +26804,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1903234402}
     m_Modifications:
+    - target: {fileID: 3952962414301561705, guid: 112e00ad2380094418b01b0d61404e87, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952962414301561705, guid: 112e00ad2380094418b01b0d61404e87, type: 3}
+      propertyPath: m_GravityScale
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6139768970094583143, guid: 112e00ad2380094418b01b0d61404e87, type: 3}
       propertyPath: m_RootOrder
       value: 0
