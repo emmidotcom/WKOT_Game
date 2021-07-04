@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour
 {
-   // Bottom myAtomBottom;
-   // public AudioSource MyAtomSource;
-   // public GameObject AtomGameOver;
+   
+   public AudioSource MyAtomSource;
+   public GameObject AtomGameOver;
 
 
     public static Countdown Instance;
@@ -19,6 +19,7 @@ public class Countdown : MonoBehaviour
     public Sprite TimeImageGreen;
     public AudioSource GameOverTon;
     public AudioSource Ticking;
+    public bool HotTime;
 
     [SerializeField] Text countdownText;
 
@@ -53,12 +54,13 @@ public class Countdown : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");  
 
-            if (currentTime <= 0) //&&!myAtomBottom.AtomKatastrophe)
+            if (currentTime <= 0 && !Bottom.Instance.AtomKatastrophe)
             {
                 Running = false;
                 currentTime = 0;
                 Manager.trashSpawner.StopTrashSpawn();
                 GameOver.gameObject.SetActive(true);
+                Ticking.Stop();
 
 
 
@@ -88,35 +90,32 @@ public class Countdown : MonoBehaviour
 
             }
         
-       // if (myAtomBottom.AtomKatastrophe)
-        //{
-          //  Running = false;
-          //  currentTime = 0;
-          //  Manager.trashSpawner.StopTrashSpawn();
-          //  AtomGameOver.SetActive(true); 
-            
-          //  if (currentTime == 0)
-          //  {
-          //      MyAtomSource.Play();
-          //  }
-       // }
+       if (Bottom.Instance.AtomKatastrophe)
+       {
+            Running = false;
+            currentTime = 0;
+            Manager.trashSpawner.StopTrashSpawn();
+            AtomGameOver.SetActive(true);
+            Ticking.Stop();
+
+            if (currentTime == 0)
+            {
+                MyAtomSource.Play();
+            }
+       }
        
         
-            if (currentTime == 0)// && !myAtomBottom.AtomKatastrophe)
+            if (currentTime == 0&&!Bottom.Instance.AtomKatastrophe)
             {
                 GameOverTon.PlayOneShot(GameOverTon.clip);
             }
 
-        if (currentTime <= 10)
+        if (!HotTime&&currentTime <= 10)
         {
             countdownText.color = Color.red;
             TimeImage.sprite = TimeImageRed;
-        }
-
-
-        if (Running)
-        {
-            Ticking.PlayDelayed(6.0f);
+            HotTime = true;
+            Ticking.Play();
         }
     }
 

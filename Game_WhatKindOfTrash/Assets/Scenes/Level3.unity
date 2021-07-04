@@ -186,6 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 999a2f903182b054aaf8f374851c62ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyAtomSource: {fileID: 12531676}
+  AtomGameOver: {fileID: 1436088499}
   TimeImage: {fileID: 774174261}
   TimeImageRed: {fileID: 21300000, guid: e0baeb5af605b3a4ab20ae041b99f7d6, type: 3}
   TimeImageGreen: {fileID: 21300000, guid: 602e495bc3a0ea14c8c70175443e42f5, type: 3}
@@ -2513,6 +2515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyAudioSource: {fileID: 326024495}
+  AtomKatastrophe: 0
 --- !u!61 &326024497
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9324,7 +9327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -18882,7 +18885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1436088500
 Transform:
   m_ObjectHideFlags: 0
@@ -19490,7 +19493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1552677945
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27063,7 +27066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2009431745
 Transform:
   m_ObjectHideFlags: 0
