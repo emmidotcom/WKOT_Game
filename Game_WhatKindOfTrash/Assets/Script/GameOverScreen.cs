@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
 
-    public GameObject LastLevelInfo;
+   // public GameObject LastLevelInfo;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +17,5 @@ public class GameOverScreen : MonoBehaviour
     public void LoadLevel(string LevelName)
     {
         SceneManager.LoadScene(LevelName);
-    }
-
-    public void LetztesLevel()
-    {
-        LastLevelInfo.SetActive(true);
     }
 }
