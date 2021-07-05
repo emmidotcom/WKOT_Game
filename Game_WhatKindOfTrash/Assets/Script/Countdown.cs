@@ -12,7 +12,7 @@ public class Countdown : MonoBehaviour
 
     public static Countdown Instance;
     float currentTime = 0f;
-    float startingTime = 15f; //hier Zeit die wir wollen
+    float startingTime = 90f; //hier Zeit die wir wollen
 
     public Image TimeImage;
     public Sprite TimeImageRed;
@@ -64,7 +64,7 @@ public class Countdown : MonoBehaviour
 
 
 
-                if (ScoreManager.score > 30)                 //Punkte die man braucht um Level zu bestehen hier angeben
+                if (ScoreManager.score > 450)                 //Punkte die man braucht um Level zu bestehen hier angeben
                 {
                     NextLevelButton.SetActive(true);
                     SchildiHappy.SetActive(true);
@@ -77,18 +77,24 @@ public class Countdown : MonoBehaviour
                 {
                     PunkteFehlen.SetActive(true);
                     SchildiSad.SetActive(true);
-                    Recycling1.SetActive(true);
                 }
 
 
-                if (ScoreManager.score > 100)
+                if (ScoreManager.score > 800)
                 {
 
                     Recycling3.SetActive(true);
 
                 }
 
+            if (ScoreManager.score > 200)
+            {
+
+                Recycling1.SetActive(true);
+
             }
+
+        }
         
        if (Bottom.Instance.AtomKatastrophe)
        {

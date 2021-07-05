@@ -18,7 +18,7 @@ public class BadPoints : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = "" + score.ToString();   //Angezeigter Text = "x und ScoreKette (addierte Zahlen Kette)
+        scoreText.text = "- " + score.ToString();   //Angezeigter Text = "x und ScoreKette (addierte Zahlen Kette)
     }
 
     public void TakeBadPoint()                          //Eine Score Variante +15  ->  richtig zugeordnet
