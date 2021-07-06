@@ -104,14 +104,14 @@ public class Countdown : MonoBehaviour
             AtomGameOver.SetActive(true);
             Ticking.Stop();
 
-            if (currentTime == 0)
-            {
-                MyAtomSource.Play();
-            }
-       }
-       
-        
-            if (currentTime == 0&&!Bottom.Instance.AtomKatastrophe)
+               if (currentTime == 0)
+               {
+                    MyAtomSource.Play();
+               }
+        }
+
+
+        if (currentTime == 0&&!Bottom.Instance.AtomKatastrophe)
             {
                 GameOverTon.PlayOneShot(GameOverTon.clip);
             }
