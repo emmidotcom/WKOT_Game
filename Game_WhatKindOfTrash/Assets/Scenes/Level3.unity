@@ -235,7 +235,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 0.5
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -2465,7 +2465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326024492}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.005, y: -12, z: 0}
+  m_LocalPosition: {x: -0.005, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1175306149}
@@ -16200,7 +16200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Atommuell: {fileID: 1747289047}
-  SpawnDelay: 3
+  SpawnDelay: 15
   blinkGameObject: {fileID: 857230305}
   intervallLeft: 8
   blinkDuration: 0.3

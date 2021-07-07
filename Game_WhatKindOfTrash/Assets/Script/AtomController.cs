@@ -5,7 +5,7 @@ using UnityEngine;
 public class AtomController : MonoBehaviour
 {
     public GameObject Atommuell;
-    public float SpawnDelay=3f;                     //ab wann solls los gehen
+    public float SpawnDelay=15f;                     //ab wann solls los gehen
     public GameObject blinkGameObject;
     public int intervallLeft = 5;                   //anzahl wie oft es blinkt
     public float blinkDuration = 0.5f;              //wie schnell blinkts
